@@ -1,0 +1,32 @@
+{
+  "name": "csv2md",
+  "version": "1.0.0",
+  "description": "Converts CSV files to Markdown tables.",
+  "main": "app.js",
+  "bin": "app.js",
+  "scripts": {
+    "build": "pkg . --output csv2md"
+  },
+  "keywords": [
+    "csv",
+    "md",
+    "markdown"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tje/csv2md.git"
+  },
+  "author": "Tyler <tyler@modem.io>",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.3.0"
+  },
+  "pkg": {
+    "targets": [
+      "node18"
+    ]
+  },
+  "optionalDependencies": {
+    "pkg": "^5.8.0"
+  }
+}
