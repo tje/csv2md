@@ -45,6 +45,13 @@ function getInput () {
 
 getInput()
   .then((parsed) => {
+    // Escape any pipe symbols in cells
+    for (const rec of parsed) {
+      for (const [ k, v ] of Object.entries(rec)) {
+        rec[k] = v.replace(/(?<!\\)\|/g, '\\|')
+      }
+    }
+
     const cols = parsed.reduce((a, b) => {
       const out = {}
       for (const key of Object.keys(b)) {
